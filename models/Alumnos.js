@@ -32,4 +32,6 @@ const AlumnoSchema = Schema({
     }
 });
 
+
+
 module.exports = model('Alumnos', AlumnoSchema)
