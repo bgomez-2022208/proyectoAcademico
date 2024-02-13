@@ -64,6 +64,8 @@ const alumnosPost = async (req, res) => {
     const {nombre,correo,password,role} = req.body;
     const alumnos = new Alumnos({nombre, correo, password, role});
 
+    alumnos.role = 'STUDENT_ROLE';
+
     const salt = bcryptjs.genSaltSync();
     alumnos.password = bcryptjs.hashSync(password, salt);
 
