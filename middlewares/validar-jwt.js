@@ -29,7 +29,7 @@ const validarJWT = async(req = request, res = response, next)=> {
             });
         }
 
-        req.alumno = usuario;
+        req.alumno = alumno;
         next();
         
     }catch(e){

@@ -1,7 +1,8 @@
 const { Router } = require('express');
 const { check } = require ('express-validator');
 
-const { validarCampos } = require('../middlewares/validar-campos');
+//const { validarCampos } = require('../middlewares/validar-campos');
+const { validarCampos, validarJWT, esAdminRole, tieneRolAutorizado } = require('../middlewares');
 
 const {alumnosPost, alumnosDelete, putAlumnos, getAlumById, alumGet} = require('../controllers/alum.controller');
 const { existeUsuarioByIdAlumnos,existenteEmailAlumnos, esRoleValido } = require('../helpers/db-validators');
@@ -40,13 +41,16 @@ router.post(
         validarCampos,
     ], alumnosPost);
 
-router.delete(
-    "/:id",
-    [
-        check(`id`,`No es un id valido`).isMongoId(),
-        check(`id`).custom(existeUsuarioByIdAlumnos),
-        validarCampos
-    ], alumnosDelete);
+    router.delete(
+        "/:id",
+        [   
+            validarJWT,
+            tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
+            check('id', 'No es un id válido').isMongoId(),
+            check('id').custom(existeUsuarioByIdAlumnos),
+            validarCampos
+        ], alumnosDelete);
+    
 
 
 module.exports = router;
