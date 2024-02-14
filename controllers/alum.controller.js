@@ -42,7 +42,7 @@ const putAlumnos = async (req, res = response) =>{
     const alumnos = Alumnos.findOne({id});
 
     res.status(200).json({
-        msg: 'Alumno actualizado correctamente',
+        msg: 'Usuario Actualizado Exitosamente!!!',
         alumnos
     });
 }

@@ -20,7 +20,7 @@ const ProfesorSchema = Schema({
     role:{
         type: String,
         require: true,
-        enum: ["ADMIN_ROLE", "USER_ROLE"]
+        enum: ["ADMIN_ROLE", "USER_ROLE","TEACHER_ROLE"]
     },
     estado:{
         type: Boolean,
