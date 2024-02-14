@@ -1,0 +1,81 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "cursos",
+    "dateExported": "2024-02-14T22:47:36.514Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e189524d-2be7-41a6-9508-0ed4e4a8d4cd",
+            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "containerId": "",
+            "name": "create curso",
+            "url": "http://localhost:3000/api/curso",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-14T22:15:31.546Z",
+            "modified": "2024-02-14T22:25:21.193Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"materia\": \"rerwer\",\n  \"profesor\": \"Pedro\",\n  \"descripcion\": \"fdsfsdf\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "661ac673-8889-431b-b34b-535d67500f99",
+            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "containerId": "",
+            "name": "list materias",
+            "url": "http://localhost:3000/api/curso?desde=2&limite=3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-14T22:24:28.985Z",
+            "modified": "2024-02-14T22:40:44.781Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8208bd28-91bf-4421-9fdd-2edfec935778",
+            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "containerId": "",
+            "name": "buscar materia",
+            "url": "http://localhost:3000/api/curso/65cd3dd7074909c802280a2c",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-14T22:25:52.400Z",
+            "modified": "2024-02-14T22:44:29.974Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7d2c4ddc-1561-49cc-be96-bc820da64b83",
+            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "containerId": "",
+            "name": "delete curso",
+            "url": "http://localhost:3000/api/curso/65cd3dd7074909c802280a2a",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-14T22:36:23.388Z",
+            "modified": "2024-02-14T22:36:45.674Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Profesores",
+    "dateExported": "2024-02-14T22:47:28.851Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3abbf8bb-11b3-4bba-84af-170f7bb1c0f4",
+            "colId": "3160c5cc-dfb6-4d86-9c3a-82e07558be48",
+            "containerId": "",
+            "name": "create teacher",
+            "url": "http://localhost:3000/api/maestros",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-14T20:18:12.687Z",
+            "modified": "2024-02-14T20:25:17.795Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"BGAE19\",\n  \"correo\": \"bgomez-2022213@kinal.edu.gt\",\n  \"password\": \"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a1d38e3-ea56-4207-ad03-ff3b38df9fa0",
+            "colId": "3160c5cc-dfb6-4d86-9c3a-82e07558be48",
+            "containerId": "",
+            "name": "list profesores",
+            "url": "http://localhost:3000/api/maestros?desde=1&limite=3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-14T20:23:58.069Z",
+            "modified": "2024-02-14T20:24:33.365Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e5b2fe22-b3ff-45b9-9e7d-e932af8b0678",
+            "colId": "3160c5cc-dfb6-4d86-9c3a-82e07558be48",
+            "containerId": "",
+            "name": "buscar profesores",
+            "url": "http://localhost:3000/api/maestros/65cd210ee9ca70b7c2aa1153",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-14T20:27:29.521Z",
+            "modified": "2024-02-14T20:28:36.022Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d09e4f3c-5da2-4040-bb05-b4e9baabccf4",
+            "colId": "3160c5cc-dfb6-4d86-9c3a-82e07558be48",
+            "containerId": "",
+            "name": "delete maestros",
+            "url": "http://localhost:3000/api/maestros/65cd210ee9ca70b7c2aa1153",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-14T20:29:31.105Z",
+            "modified": "2024-02-14T20:29:58.220Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1b88d9ae-bf9f-43fb-89fd-5ac8161f563a",
+            "colId": "3160c5cc-dfb6-4d86-9c3a-82e07558be48",
+            "containerId": "",
+            "name": "update teachers",
+            "url": "http://localhost:3000/api/maestros/65cd21a2aae6c015593b0f8f",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-14T20:30:11.265Z",
+            "modified": "2024-02-14T20:31:33.731Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"BGAE500\",\n  \"correo\": \"bgomez-2022345@kinal.edu.gt\",\n  \"password\": \"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

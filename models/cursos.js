@@ -12,15 +12,7 @@ const CursoSchema = Schema({
         required: [true, "el nombre del profesor es bligatorio"]
     },
     
-    estado:{
-        type: Boolean,
-        default: true
-    },
 
-    horario:{
-        type: String,
-        required: [true, "El tiempo del curso es necesario"]
-    },
     descripcion:{
         type: String,
         required: [true, "a;ade una descripcion al curso"]
