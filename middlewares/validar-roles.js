@@ -10,7 +10,7 @@ const esAdminRole = (req, res, next) => {
 
     const { role, nombre } =  req.alumno;
 
-    if(role !== "ADMIN_ROLE"){
+    if(role !== "TEACHER_ROLE"){
         return res.status(401).json({
             msg: `${nombre} no es un administrador, no puede usar este endpoint`
         });
@@ -20,13 +20,13 @@ const esAdminRole = (req, res, next) => {
 
 const tieneRolAutorizado = (...roles) => {
     return (req =request, res = response, next) =>{
-        if(!req.alumno){
+        if(!req.usuario){
             return res.status(500).json({
                 msg: "Se desea validar un usuario sin validar token primero"
             });
         }
     
-        if(!roles.includes(req.alumno.role)){
+        if(!roles.includes(req.usuario.role)){
             return res.status(401).json({
                 msg: `El servicio requiere uno de los siguientes roles autorizados ${roles}`
             });

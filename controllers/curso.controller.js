@@ -40,7 +40,7 @@ const putCurso = async (req, res = response) =>{
 
     await Curso.findByIdAndUpdate(id, resto);
 
-    const curso = Curso.findOne({id});
+    const curso = await Curso.findOne({_id: id});
 
     res.status(200).json({
         msg: 'Curso Actualizado Exitosamente!!!',

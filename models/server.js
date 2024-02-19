@@ -11,6 +11,7 @@ class Server{
         this.maestrosPath = '/api/maestros';
         this.cursoPath = '/api/curso';
         this.login = '/api/auth';
+        this.joinPath = '/api/join';
 
         this.conectarDB();
         this.middlewares();
@@ -28,6 +29,7 @@ class Server{
     }
 
     routes(){
+        this.app.use(this.joinPath, require('../routes/join.routes'));
         this.app.use(this.alumnosPath, require('../routes/alum.routes'));
         this.app.use(this.maestrosPath, require('../routes/teach.routes'));
         this.app.use(this.cursoPath, require('../routes/curso.routes'));

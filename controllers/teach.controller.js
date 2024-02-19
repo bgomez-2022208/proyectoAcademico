@@ -40,7 +40,7 @@ const putProfesor = async (req, res = response) =>{
 
     await Profesor.findByIdAndUpdate(id, resto);
 
-    const profesor = Profesor.findOne({id});
+    const profesor = await Profesor.findOne({_id: id});
 
     res.status(200).json({
         msg: 'Profesor actualizado exitosamente',

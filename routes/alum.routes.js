@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { check } = require ('express-validator');
 
 //const { validarCampos } = require('../middlewares/validar-campos');
-const { validarCampos, validarJWT, esAdminRole, tieneRolAutorizado } = require('../middlewares');
+const { validarCampos, validarJWT, esAdminRole, tieneRolAutorizado, validarJWTProfesor } = require('../middlewares');
 
 const {alumnosPost, alumnosDelete, putAlumnos, getAlumById, alumGet} = require('../controllers/alum.controller');
 const { existeUsuarioByIdAlumnos,existenteEmailAlumnos, esRoleValido } = require('../helpers/db-validators');
@@ -14,6 +14,7 @@ router.get("/", alumGet);
 router.get(
     "/:id",
     [
+        
         check(`id`,"No es un id valido").isMongoId(),
         check(`id`).custom(existeUsuarioByIdAlumnos),
         validarCampos
@@ -24,7 +25,7 @@ router.put(
     [
         check(`id`,`No es un id valido`).isMongoId(),
         check('id').custom(existeUsuarioByIdAlumnos),
-        check("role").custom(esRoleValido),
+      
         validarCampos
 
     ], putAlumnos);
@@ -44,8 +45,7 @@ router.post(
     router.delete(
         "/:id",
         [   
-            validarJWT,
-            tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
+            validarJWTProfesor,
             check('id', 'No es un id válido').isMongoId(),
             check('id').custom(existeUsuarioByIdAlumnos),
             validarCampos

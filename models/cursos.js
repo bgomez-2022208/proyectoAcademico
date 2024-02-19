@@ -16,6 +16,13 @@ const CursoSchema = Schema({
     descripcion:{
         type: String,
         required: [true, "a;ade una descripcion al curso"]
+    },
+    estudiantes:{
+        type: [String],
+    },
+    estado:{
+        type: Boolean,
+        default: true
     }
     
 });

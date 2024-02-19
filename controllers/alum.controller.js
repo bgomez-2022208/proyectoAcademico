@@ -39,7 +39,8 @@ const putAlumnos = async (req, res = response) =>{
 
     await Alumnos.findByIdAndUpdate(id, resto);
 
-    const alumnos = Alumnos.findOne({id});
+    const alumnos = await Alumnos.findOne({_id: id});
+
 
     res.status(200).json({
         msg: 'Usuario Actualizado Exitosamente!!!',
