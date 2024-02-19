@@ -14,7 +14,8 @@ router.get("/", alumGet);
 router.get(
     "/:id",
     [
-        
+        validarJWT,
+    tieneRolAutorizado('STUDENT_ROLE'),
         check(`id`,"No es un id valido").isMongoId(),
         check(`id`).custom(existeUsuarioByIdAlumnos),
         validarCampos
@@ -23,6 +24,8 @@ router.get(
 router.put(
     "/:id",
     [
+        validarJWT,
+    tieneRolAutorizado('STUDENT_ROLE'),
         check(`id`,`No es un id valido`).isMongoId(),
         check('id').custom(existeUsuarioByIdAlumnos),
       
@@ -33,6 +36,8 @@ router.put(
 router.post(
     "/",
     [
+        validarJWT,
+    tieneRolAutorizado('STUDENT_ROLE'),
         check("nombre", "El nombre no puede estar vacio").not().isEmpty(),
         check("password", "El password debe ser mayor a 6 caracteres").isLength({min:6}),
         check("correo", "Este no es un correo valido").isEmail(),
@@ -45,7 +50,8 @@ router.post(
     router.delete(
         "/:id",
         [   
-            validarJWTProfesor,
+            validarJWT,
+            tieneRolAutorizado('STUDENT_ROLE'),
             check('id', 'No es un id válido').isMongoId(),
             check('id').custom(existeUsuarioByIdAlumnos),
             validarCampos
