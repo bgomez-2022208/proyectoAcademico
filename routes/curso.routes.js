@@ -19,6 +19,7 @@ router.get(
     "/:id",
     [
         validarJWTProfesor,
+        tieneRolAutorizado('TEACHER_ROLE'),
         check(`id`,"No es un id valido").isMongoId(),
         check(`id`).custom(existeByIdCurso),
         validarCampos
@@ -27,7 +28,8 @@ router.get(
 router.put(
     "/:id",
     [
-        validarJWTProfesor,
+    validarJWTProfesor,
+    tieneRolAutorizado('TEACHER_ROLE'),
     check(`id`,`No es un id valido`).isMongoId(),
     check('id').custom(existeByIdCurso),
     validarCampos
@@ -51,6 +53,7 @@ router.delete(
     "/:id",
     [
     validarJWTProfesor,
+    tieneRolAutorizado('TEACHER_ROLE'),
     check(`id`,`No es un id valido`).isMongoId(),
     check(`id`).custom(existeByIdCurso),
     validarCampos

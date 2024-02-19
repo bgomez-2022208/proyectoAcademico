@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "Alumnos",
-    "dateExported": "2024-02-14T20:17:42.757Z",
+    "dateExported": "2024-02-19T05:30:41.553Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "8533dc89-30ea-4012-8604-d5197b58ff23",
-            "colId": "1db0a68a-4eeb-4f7c-a768-2ea9572275c1",
+            "_id": "9a89c338-687e-4107-86c7-114f1f89e40e",
+            "colId": "7b5d71f7-f942-4160-b6b8-44caadba903f",
             "containerId": "",
             "name": "create alumnos",
             "url": "http://localhost:3000/api/alumnos",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-13T22:47:07.775Z",
-            "modified": "2024-02-14T19:42:37.602Z",
+            "created": "2024-02-18T18:46:05.775Z",
+            "modified": "2024-02-19T01:49:00.268Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"BGAE9\",\n  \"correo\": \"bgomez-2022210@kinal.edu.gt\",\n  \"password\": \"12345678\"\n}",
+                "raw": "{\n  \"nombre\": \"BGAE9\",\n  \"correo\": \"bgomez-20134@kinal.edu.gt\",\n  \"password\": \"12345678\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "f284d60f-ee08-472b-8500-3c2a7c7cb18e",
-            "colId": "1db0a68a-4eeb-4f7c-a768-2ea9572275c1",
+            "_id": "cbc33646-a392-428f-aa43-96b0f81f0c7f",
+            "colId": "7b5d71f7-f942-4160-b6b8-44caadba903f",
             "containerId": "",
             "name": "list alumnos",
             "url": "http://localhost:3000/api/alumnos?desde=1&limite=3",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-14T19:57:47.978Z",
-            "modified": "2024-02-14T19:58:49.572Z",
+            "created": "2024-02-18T18:46:05.776Z",
+            "modified": "2024-02-18T18:46:05.776Z",
             "headers": [],
             "params": [
                 {
@@ -50,48 +50,59 @@
             "tests": []
         },
         {
-            "_id": "bd93a883-db5c-4d66-acf3-90e42a865613",
-            "colId": "1db0a68a-4eeb-4f7c-a768-2ea9572275c1",
+            "_id": "1bec3828-7c6b-40c5-bace-ecf6accf1ee0",
+            "colId": "7b5d71f7-f942-4160-b6b8-44caadba903f",
             "containerId": "",
             "name": "buscar alumnos",
             "url": "http://localhost:3000/api/alumnos/65cbf4bd5e6f86f4e3bca4f6",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-14T19:59:09.332Z",
-            "modified": "2024-02-14T19:59:32.430Z",
+            "created": "2024-02-18T18:46:05.777Z",
+            "modified": "2024-02-18T18:46:05.777Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "3160511f-633c-481e-8b0e-f4a607ae5b33",
-            "colId": "1db0a68a-4eeb-4f7c-a768-2ea9572275c1",
+            "_id": "7162e52d-fbd3-4d85-aff2-494ec15d3bac",
+            "colId": "7b5d71f7-f942-4160-b6b8-44caadba903f",
             "containerId": "",
             "name": "delete alumnos",
-            "url": "http://localhost:3000/api/alumnos/65cbf4bd5e6f86f4e3bca4f6",
+            "url": "http://localhost:3000/api/alumnos/65cbf4bd5e6f86f4e3bca4f6?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTYwMzYsImV4cCI6MTcwODMxOTYzNn0.UkE5iA9Im4E74ZgDX9ZZ-gjfHLNQgze-V2gZru4ull.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTU2MTMsImV4cCI6MTcwODMxOTIxM30.Cp-obG6YH7MOTyKKy5PWrNkQX9PzHCMmmsc1SmWBZPo",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-02-14T19:59:46.764Z",
-            "modified": "2024-02-14T20:00:07.255Z",
+            "created": "2024-02-18T18:46:05.778Z",
+            "modified": "2024-02-19T04:24:03.269Z",
             "headers": [],
-            "params": [],
+            "params": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTYwMzYsImV4cCI6MTcwODMxOTYzNn0.UkE5iA9Im4E74ZgDX9ZZ-gjfHLNQgze-V2gZru4ull.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTU2MTMsImV4cCI6MTcwODMxOTIxM30.Cp-obG6YH7MOTyKKy5PWrNkQX9PzHCMmmsc1SmWBZPo",
+                    "isPath": false
+                }
+            ],
             "tests": []
         },
         {
-            "_id": "51d8d7fe-c4b1-4bc6-92c5-aba3894532be",
-            "colId": "1db0a68a-4eeb-4f7c-a768-2ea9572275c1",
+            "_id": "8dad0d14-bf9d-46ce-82e0-8c2c29268b1c",
+            "colId": "7b5d71f7-f942-4160-b6b8-44caadba903f",
             "containerId": "",
             "name": "update alumnos",
-            "url": "http://localhost:3000/api/alumnos/65cd17ad110c4048ee510fe8",
+            "url": "http://localhost:3000/api/alumnos/65d2a324f66be7519c94f9d5",
             "method": "PUT",
             "sortNum": 50000,
-            "created": "2024-02-14T20:00:31.764Z",
-            "modified": "2024-02-14T20:15:29.446Z",
-            "headers": [],
+            "created": "2024-02-18T18:46:05.779Z",
+            "modified": "2024-02-19T00:41:27.128Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyNTJmMzk5YzZmY2YyNDhmZmM1ZmUiLCJpYXQiOjE3MDgyODkyMTAsImV4cCI6MTcwODI5MjgxMH0.eo_STYepEpLEnk9ia1qWVvoVf_CSOq_jC1Fm0l73D18"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"DonPollo\",\n  \"correo\": \"bgomez-134@kinal.edu.gt\",\n  \"password\": \"123456789\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"BGAE9\",\n  \"correo\": \"bgomez-2022212@kinal.edu.gt\",\n  \"password\": \"12345678\"\n}",
                 "form": []
             },
             "tests": []

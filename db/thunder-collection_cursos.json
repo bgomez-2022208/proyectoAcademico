@@ -1,40 +1,50 @@
 {
     "client": "Thunder Client",
     "collectionName": "cursos",
-    "dateExported": "2024-02-14T22:47:36.514Z",
+    "dateExported": "2024-02-19T05:30:25.401Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "e189524d-2be7-41a6-9508-0ed4e4a8d4cd",
-            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "_id": "0e6ef6f1-4bcc-4020-a6eb-77b1083cb7b5",
+            "colId": "79f0c68b-1894-4b93-bb9a-6dc6213e3ae6",
             "containerId": "",
             "name": "create curso",
             "url": "http://localhost:3000/api/curso",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-14T22:15:31.546Z",
-            "modified": "2024-02-14T22:25:21.193Z",
-            "headers": [],
+            "created": "2024-02-18T18:45:55.755Z",
+            "modified": "2024-02-19T05:28:44.430Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjk4OWY3NTgyOWVhYjk1ZTRmZGEiLCJpYXQiOjE3MDgzMjA0NDksImV4cCI6MTcwODMyNDA0OX0.W7dEJQeMHKknaJ2S3Ur32J3l_bYPAmxVqatPhMkhtuw"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"materia\": \"rerwer\",\n  \"profesor\": \"Pedro\",\n  \"descripcion\": \"fdsfsdf\"\n}",
+                "raw": "{\n  \"materia\": \"PRUEBA1\",\n  \"profesor\": \"dasdd\",\n  \"descripcion\": \"fdsfsdf\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "661ac673-8889-431b-b34b-535d67500f99",
-            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "_id": "1ff96cd4-3b54-45ca-8d20-d8412b523330",
+            "colId": "79f0c68b-1894-4b93-bb9a-6dc6213e3ae6",
             "containerId": "",
             "name": "list materias",
             "url": "http://localhost:3000/api/curso?desde=2&limite=3",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-14T22:24:28.985Z",
-            "modified": "2024-02-14T22:40:44.781Z",
-            "headers": [],
+            "created": "2024-02-18T18:45:55.756Z",
+            "modified": "2024-02-19T04:41:58.257Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTYwMzYsImV4cCI6MTcwODMxOTYzNn0.UkE5iA9Im4E74ZgDX9ZZ-gjfHLNQgze-V2gZru4ullU"
+                }
+            ],
             "params": [
                 {
                     "name": "desde",
@@ -50,31 +60,65 @@
             "tests": []
         },
         {
-            "_id": "8208bd28-91bf-4421-9fdd-2edfec935778",
-            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "_id": "c90e9951-e82f-4614-bc78-f0f0b3de82fb",
+            "colId": "79f0c68b-1894-4b93-bb9a-6dc6213e3ae6",
             "containerId": "",
             "name": "buscar materia",
-            "url": "http://localhost:3000/api/curso/65cd3dd7074909c802280a2c",
+            "url": "http://localhost:3000/api/curso/65d2aacd838c8b8393c45dc5",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-14T22:25:52.400Z",
-            "modified": "2024-02-14T22:44:29.974Z",
-            "headers": [],
+            "created": "2024-02-18T18:45:55.757Z",
+            "modified": "2024-02-19T05:27:48.334Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjk4OWY3NTgyOWVhYjk1ZTRmZGEiLCJpYXQiOjE3MDgzMjA0NDksImV4cCI6MTcwODMyNDA0OX0.W7dEJQeMHKknaJ2S3Ur32J3l_bYPAmxVqatPhMkhtuw"
+                }
+            ],
             "params": [],
             "tests": []
         },
         {
-            "_id": "7d2c4ddc-1561-49cc-be96-bc820da64b83",
-            "colId": "0589dee2-5624-4057-88f8-9053251b47c2",
+            "_id": "ec405fbc-74f5-4875-bb7f-0285dc2d1499",
+            "colId": "79f0c68b-1894-4b93-bb9a-6dc6213e3ae6",
             "containerId": "",
             "name": "delete curso",
-            "url": "http://localhost:3000/api/curso/65cd3dd7074909c802280a2a",
+            "url": "http://localhost:3000/api/curso/65d2aacd838c8b8393c45dc5",
             "method": "DELETE",
-            "sortNum": 40000,
-            "created": "2024-02-14T22:36:23.388Z",
-            "modified": "2024-02-14T22:36:45.674Z",
-            "headers": [],
+            "sortNum": 35000,
+            "created": "2024-02-18T18:45:55.758Z",
+            "modified": "2024-02-19T04:53:23.589Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyOWU4MGFjMDE4MTI5YzFjOGYwNmEiLCJyb2xlIjoiVEVBQ0hFUl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJpYXQiOjE3MDgzMTYwMzYsImV4cCI6MTcwODMxOTYzNn0.UkE5iA9Im4E74ZgDX9ZZ-gjfHLNQgze-V2gZru4ullU"
+                }
+            ],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3e8e8385-5c29-4fa0-8642-dd94da853bdd",
+            "colId": "79f0c68b-1894-4b93-bb9a-6dc6213e3ae6",
+            "containerId": "",
+            "name": "update_curso",
+            "url": "http://localhost:3000/api/curso/65d2aacd838c8b8393c45dc5",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-19T00:45:50.788Z",
+            "modified": "2024-02-19T05:27:40.201Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjk4OWY3NTgyOWVhYjk1ZTRmZGEiLCJpYXQiOjE3MDgzMjA0NDksImV4cCI6MTcwODMyNDA0OX0.W7dEJQeMHKknaJ2S3Ur32J3l_bYPAmxVqatPhMkhtuw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"materia\": \"lllllloooo\",\n  \"profesor\": \"Pedro\",\n  \"descripcion\": \"fdsfsdf\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

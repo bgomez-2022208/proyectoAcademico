@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "agregaralum_Cursos",
+    "dateExported": "2024-02-19T05:31:02.300Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0e7f921f-15f3-4409-a810-66c2dd9e451b",
+            "colId": "d62d3972-a4c8-49b5-8595-3d178674a732",
+            "containerId": "",
+            "name": "add alum",
+            "url": "http://localhost:3000/api/join",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-19T01:34:08.846Z",
+            "modified": "2024-02-19T01:39:13.807Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"materia\":\"rerwer\",\n  \"estudiantes\":\"gfdgfdgdfgd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "626ab4c3-effa-4ec1-93df-9c1619cc128b",
+            "colId": "d62d3972-a4c8-49b5-8595-3d178674a732",
+            "containerId": "",
+            "name": "delete_cursosAlum",
+            "url": "http://localhost:3000/api/join/65d2a9886844b506af620a81",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-02-19T02:04:39.851Z",
+            "modified": "2024-02-19T02:07:47.676Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\":\"65d2a9886844b506af620a81\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
