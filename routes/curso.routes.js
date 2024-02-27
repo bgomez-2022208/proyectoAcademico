@@ -8,7 +8,7 @@ const { validarCampos, validarJWT, esAdminRole, tieneRolAutorizado,validarJWTPro
 
 
 const {cursoGet, getCursoById, putCurso, cursoDelete, CursoPost} = require('../controllers/curso.controller');
-const { existeByIdCurso} = require('../helpers/db-validators');
+const { existeByIdCurso,  existenteMateria} = require('../helpers/db-validators');
 
 const router = Router();
 
@@ -20,7 +20,7 @@ router.get(
     [
         validarJWTProfesor,
         tieneRolAutorizado('TEACHER_ROLE'),
-        check(`id`,"No es un id valido").isMongoId(),
+        check(`id`,"No es una materia  valida").isMongoId(),
         check(`id`).custom(existeByIdCurso),
         validarCampos
     ], getCursoById);
@@ -42,10 +42,11 @@ router.post(
     validarJWTProfesor,
     tieneRolAutorizado('TEACHER_ROLE'),
     check("materia", "El nombre no puede estar vacio").not().isEmpty(),
+    check("materia").custom(existenteMateria),
+
     check("profesor", "El nombre del profesor no puede estar vacio").not().isEmpty(),
     check("descripcion", "El descripcion no puede estar vacia").not().isEmpty(),
     
-        
     validarCampos,
     ], CursoPost);
 

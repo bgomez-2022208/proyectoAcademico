@@ -44,11 +44,16 @@ const existeUsuarioByIdProfesor = async (id = '') => {
 const existeByIdCurso = async (id = '') => {
     const existeCurso = await Cursos.findOne({id});
     if(existeCurso){
-        throw new Error(`El curso con el ${ id } no existe`)
+        throw new Error(`El curso con la ${ id } no existe`)
     }
 }
 
-
+const existenteMateria = async (materia = '') => {
+    const existeMateria = await Cursos.findOne({materia});
+    if(existeMateria){
+        throw new Error(`La materia ${ materia } ya está registrada`);
+    }
+}
 
 
 module.exports = {
@@ -57,5 +62,6 @@ module.exports = {
     existeUsuarioByIdAlumnos,
     existenteEmailProfesor,
     existeUsuarioByIdProfesor,
-    existeByIdCurso
+    existeByIdCurso,
+    existenteMateria
 }

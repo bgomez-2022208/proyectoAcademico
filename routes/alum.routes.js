@@ -36,8 +36,8 @@ router.put(
 router.post(
     "/",
     [
-        validarJWT,
-    tieneRolAutorizado('STUDENT_ROLE'),
+        //validarJWT,
+    //tieneRolAutorizado('STUDENT_ROLE'),
         check("nombre", "El nombre no puede estar vacio").not().isEmpty(),
         check("password", "El password debe ser mayor a 6 caracteres").isLength({min:6}),
         check("correo", "Este no es un correo valido").isEmail(),
