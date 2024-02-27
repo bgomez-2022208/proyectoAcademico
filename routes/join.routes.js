@@ -12,6 +12,9 @@ router.post(
     [
         check("materia", "El id no debe ir vacio").not().isEmpty(),
          check("estudiantes","el estudiante no tiene que ir vacio").not().isEmpty(),
+         //check("estudiantes").isArray({min: 0, max: 3}).withMessage("No puedes agregar más de 3 estudiantes por curso"),
+
+        
          validarCampos,
 
     ], joinPost);
