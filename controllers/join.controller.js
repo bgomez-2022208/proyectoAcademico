@@ -12,9 +12,18 @@ const joinPost = async(req, res) =>{
             });
         }
 
+        // Verificar si el estudiante ya está en este curso
         if (cursos.estudiantes.includes(estudiantes)) {
             return res.status(400).json({
                 msg: "El estudiante ya se encuentra en esta asignatura"
+            });
+        }
+
+        // Verificar si el estudiante está en más de 3 cursos
+        const cursosDelEstudiante = await Cursos.find({ estudiantes: estudiantes });
+        if (cursosDelEstudiante.length >= 3) {
+            return res.status(400).json({
+                msg: "El estudiante ya está inscrito en 3 cursos"
             });
         }
 
@@ -28,7 +37,7 @@ const joinPost = async(req, res) =>{
 
     } catch (e) {
         res.status(500).json({
-            msg: Error `al unirse a un grupo `
+            msg: `Error al unirse a un grupo: ${e}`
         });
     }
 }
