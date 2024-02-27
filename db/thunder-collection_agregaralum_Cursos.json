@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "agregaralum_Cursos",
-    "dateExported": "2024-02-19T05:31:02.300Z",
+    "dateExported": "2024-02-27T23:11:30.205Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "0e7f921f-15f3-4409-a810-66c2dd9e451b",
-            "colId": "d62d3972-a4c8-49b5-8595-3d178674a732",
+            "_id": "8813c1d4-912f-43ae-8c1c-08c449b649fe",
+            "colId": "43e8cc48-b43e-4508-b0b3-b8048238b674",
             "containerId": "",
             "name": "add alum",
             "url": "http://localhost:3000/api/join",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-19T01:34:08.846Z",
-            "modified": "2024-02-19T01:39:13.807Z",
+            "created": "2024-02-27T19:00:49.756Z",
+            "modified": "2024-02-27T21:33:28.267Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"materia\":\"rerwer\",\n  \"estudiantes\":\"gfdgfdgdfgd\"\n}",
+                "raw": "{\n  \"materia\":\"PRUEBA1\",\n  \"estudiantes\":\"BGAE00\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "626ab4c3-effa-4ec1-93df-9c1619cc128b",
-            "colId": "d62d3972-a4c8-49b5-8595-3d178674a732",
+            "_id": "8109828a-71fd-4f98-978b-2c951714791f",
+            "colId": "43e8cc48-b43e-4508-b0b3-b8048238b674",
             "containerId": "",
             "name": "delete_cursosAlum",
             "url": "http://localhost:3000/api/join/65d2a9886844b506af620a81",
             "method": "DELETE",
             "sortNum": 20000,
-            "created": "2024-02-19T02:04:39.851Z",
-            "modified": "2024-02-19T02:07:47.676Z",
+            "created": "2024-02-27T19:00:49.758Z",
+            "modified": "2024-02-27T19:00:49.758Z",
             "headers": [],
             "params": [],
             "body": {
@@ -41,6 +41,25 @@
                 "raw": "{\n  \"_id\":\"65d2a9886844b506af620a81\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "e4e0c927-dd13-4c8f-98be-9929432e568d",
+            "colId": "43e8cc48-b43e-4508-b0b3-b8048238b674",
+            "containerId": "",
+            "name": "getCursosDelProfesor",
+            "url": "http://localhost:3000/api/join/dasdd",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-27T22:40:59.951Z",
+            "modified": "2024-02-27T22:57:41.228Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkMjFhN2FhZTZjMDE1NTkzYjBmOTIiLCJpYXQiOjE3MDkwNzQ2MjksImV4cCI6MTcwOTA3ODIyOX0.G4MEkrPYBxCSj6uVmMFYcIK-L0OQIUXneEmWUdWYX2Q"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]
