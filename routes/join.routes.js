@@ -1,10 +1,10 @@
 const { Router } = require('express');
 const { check } = require ('express-validator');
 
-
-const { joinPost, cursoAlumDelete} = require('../controllers/join.controller');
+const { getCursosByProfesor} = require('../controllers/curso.controller');
+const { joinPost} = require('../controllers/join.controller');
 const { validarCampos} = require ('../middlewares/validar-campos');
-
+const { validarJWTProfesor } = require('../middlewares');
 const router = Router();
 
 router.post(
@@ -20,12 +20,12 @@ router.post(
     ], joinPost);
 
 
-
-router.delete(
-    "/:id",
+router.get(
+    "/:profesor",
     [
-    check(`id`,`No es un id valido`).isMongoId(),
+        validarJWTProfesor,
+        check('profesor', 'El nombre del profesor es requerido').notEmpty(),
     validarCampos
-    ], cursoAlumDelete);
+    ], getCursosByProfesor);
 
 module.exports = router;

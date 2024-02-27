@@ -40,19 +40,24 @@ const joinPost = async(req, res) =>{
     }
 }
 
-const cursoAlumDelete = async (req, res) => {
-    const {id} = req.params;
-    const materia = await Curso.findByIdAndUpdate(id, {estado: false});
-
-    res.status(200).json({
-        msg: 'Alumno eliminado de un curso',
-        materia,
-    });
-}
-
-
+const getCursosByProfesor = async (req, res) => {
+    const { profesor } = req.params;
+ 
+    try {
+        const cursos = await Curso.find({ profesor: profesor });
+ 
+        if (!cursos || cursos.length === 0) {
+            return res.status(404).json({ message: 'No se encontraron cursos para este profesor.' });
+        }
+ 
+        res.status(200).json({ cursos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error del servidor.' });
+    }
+};
 
 module.exports = {
     joinPost,
-    cursoAlumDelete
+    getCursosByProfesor
 }
